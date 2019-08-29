@@ -51,6 +51,7 @@ end
 scalar_type(s::QMeasure) = Float64
 
 name(s::QMeasure) = "Q:Z$(s.key)"
+cname(s::QMeasure) = "C:Z$(s.key)"
 
 function measure(s::QMeasure, qstate::StateVector) 
 	swap!(qstate, 1, s.key)
@@ -78,5 +79,7 @@ function apply_and_collect!(x::QMeasure, qstate::StateVector, result)
 	s = reshape(data(qstate), (1, 2, div(length(qstate), 2)))
 	inplace_apply!(s, m)
 	swap!(qstate, 1, x.key)	
-	Base.push!(result, (name(x), istate-1, probability))
+	istate -= 1
+	push!(result, (name(x), istate))
+	push!(result, (cname(x)*"->$istate", probability))
 end

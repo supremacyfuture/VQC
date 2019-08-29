@@ -1,4 +1,4 @@
-export QCircuit, add!, extend!, evolve!
+export QCircuit, add!, extend!, apply!
 
 data(s::AbstractCircuit) = s.data
 scalar_type(s::AbstractCircuit) = promote_type([scalar_type(v) for v in s]...)
@@ -50,16 +50,16 @@ function apply_and_collect!(s::AbstractCircuit, state::StateVector, result)
 	end
 end
 
-function evolve!(circuit::AbstractCircuit, v::StateVector)
+function apply!(circuit::AbstractCircuit, v::StateVector)
 	result = []
 	apply_and_collect!(circuit, v, result)
-	return result	
+	return Observables(result)
 end
 
 function *(circuit::AbstractCircuit, v::StateVector)
 	T = promote_type(scalar_type(circuit), scalar_type(v))
 	v1 = StateVector{T}(copy(data(v)))
-	result = evolve!(circuit, v1)
+	result = apply!(circuit, v1)
 	return v1
 end
 

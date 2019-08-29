@@ -4,27 +4,27 @@ using Zygote
 using Zygote: @adjoint
 
 import Base.+, Base.-, Base.*, Base./
-using LinearAlgebra: norm
-import LinearAlgebra: dot
+import LinearAlgebra: dot, norm
 using Logging: @warn
 
 
 
-include("src/util/util.jl")
+include("src/misc/misc.jl")
 
 include("src/defs.jl")
 include("src/state.jl")
-include("src/gates.jl")
-include("src/gateops.jl")
-include("src/apply_gates.jl")
-include("src/measure.jl")
-include("src/circuit.jl")
-include("src/qalgs.jl")
-include("src/differentiation.jl")
-include("src/autodiff.jl")
-include("src/utility.jl")
-include("src/naive_gradient.jl")
+include("src/gate/gate.jl")
 
-include("src/parallel.jl")
+include("src/circuit/circuit.jl")
+include("src/circuit/parallel.jl")
+include("src/measure.jl")
+
+# differentiation
+include("src/diff/complex.jl")
+include("src/diff/differentiation.jl")
+include("src/diff/autodiff.jl")
+
+# utility functions
+include("src/utility/utility.jl")
 
 end

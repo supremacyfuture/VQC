@@ -1,8 +1,9 @@
 export collect_gradients
 
 _collect_gradients_impl!(a::Vector, b::Nothing) = nothing
-_collect_gradients_impl!(a::Vector, b::Number) = push!(a, b)
-function _collect_gradients_impl!(a::Vector, b::AbstractVector) 
+_collect_gradients_impl!(a::Vector, b::Real) = push!(a, b)
+_collect_gradients_impl!(a::Vector, b::Complex) = push!(a, 2*conj(b))
+function _collect_gradients_impl!(a::Vector, b::AbstractArray) 
 	for item in b
 	    _collect_gradients_impl!(a, item)
 	end
@@ -26,11 +27,11 @@ function _collect_gradients_impl!(a::Vector, b::Tuple)
 	end
 end
 
-_collect_gradients_impl!(a::Vector, b::ComplexGradient) = _collect_gradients_impl!(a, 2*cgrad(b))
-
-function collect_gradients(m)
+function collect_gradients(args...)
 	a = []
-	_collect_gradients_impl!(a, m)
+	for item in args
+	    _collect_gradients_impl!(a, item)
+	end
 	return [a...]
 end
 

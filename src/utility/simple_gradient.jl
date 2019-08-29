@@ -59,7 +59,7 @@ end
 # 	return (r...,)
 # end
 
-function simple_gradient(f, args...; dt::Real=1.0e-5)
+function simple_gradient(f, args...; dt::Real=1.0e-6)
 	r = []
 	v0 = f(args...)
 	args = [args...]
