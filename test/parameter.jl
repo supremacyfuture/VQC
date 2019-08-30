@@ -1,6 +1,6 @@
 push!(LOAD_PATH, "..")
 
-using VQC: nparameters, parameters, reset_parameters!, QCircuit, Variable
+using VQC: nparameters, parameters, set_parameters!, QCircuit, Variable
 using VQC: RxGate, HGate, CNOTGate, add!, parallelize
 
 
@@ -38,7 +38,7 @@ function test_parameter(L::Int, depth::Int)
 	check2 = (parameters(circuit) == vars)
 
 	new_vars = randn(Float64, size(vars)...)
-	reset_parameters!(new_vars, circuit)
+	set_parameters!(new_vars, circuit)
 	check3 = (nparameters(circuit) == counts)
 	check4 = (parameters(circuit) == new_vars)
 
@@ -82,7 +82,7 @@ function test_parallelized_parameter(L::Int, depth::Int)
 	check2 = (parameters(circuit) == vars)
 
 	new_vars = randn(Float64, size(vars)...)
-	reset_parameters!(new_vars, circuit)
+	set_parameters!(new_vars, circuit)
 	check3 = (nparameters(circuit) == counts)
 	check4 = (parameters(circuit) == new_vars)
 
