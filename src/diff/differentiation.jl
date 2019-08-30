@@ -1,4 +1,4 @@
-export differentiate, nparameters, parameters
+export differentiate, nparameters
 
 """
 Differentiate gates
@@ -9,7 +9,7 @@ differentiate(s::AbstractGate) = nothing
 nparameters(s::AbstractGate) = 0
 
 _reset_parameters_impl!(s::AbstractGate, coeff::AbstractVector{<:Number}, start_pos::Int=1) = start_pos
-_collect_gradients_impl!(a::Vector, b::AbstractGate) = nothing
+_collect_variables_impl!(a::Vector, b::AbstractGate) = nothing
 
 function differentiate(s::AdjointGate)
 	r = differentiate(inner_gate(s))
@@ -42,19 +42,19 @@ differentiate(s::RxGate{<:Variable}) =  RxGate(key(s), s.parameter + 0.5*pi)
 nparameters(s::RxGate{<:Variable}) = 1
 _reset_parameters_impl!(s::RxGate{<:Variable}, coeff::AbstractVector{<:Number}, start_pos::Int=1) = _reset_parameter_impl!(
 	s.parameter, coeff, start_pos)
-_collect_gradients_impl!(a::Vector, b::RxGate{<:Variable}) = push!(a, value(b.parameter))
+_collect_variables_impl!(a::Vector, b::RxGate{<:Variable}) = push!(a, value(b.parameter))
 
 differentiate(s::RyGate{<:Variable}) = RyGate(key(s), s.parameter + 0.5*pi)
 nparameters(s::RyGate{<:Variable}) = 1
 _reset_parameters_impl!(s::RyGate{<:Variable}, coeff::AbstractVector{<:Number}, start_pos::Int=1) = _reset_parameter_impl!(
 	s.parameter, coeff, start_pos)
-_collect_gradients_impl!(a::Vector, b::RyGate{<:Variable}) = push!(a, value(b.parameter))
+_collect_variables_impl!(a::Vector, b::RyGate{<:Variable}) = push!(a, value(b.parameter))
 
 differentiate(s::RzGate{<:Variable}) = RzGate(key(s), s.parameter + 0.5*pi)
 nparameters(s::RzGate{<:Variable}) = 1
 _reset_parameters_impl!(s::RzGate{<:Variable}, coeff::AbstractVector{<:Number}, start_pos::Int=1) = _reset_parameter_impl!(
 	s.parameter, coeff, start_pos)
-_collect_gradients_impl!(a::Vector, b::RzGate{<:Variable}) = push!(a, value(b.parameter))
+_collect_variables_impl!(a::Vector, b::RzGate{<:Variable}) = push!(a, value(b.parameter))
 
 
 # differentiate(s::CRxGate{<:Variable}) = begin
@@ -80,13 +80,11 @@ _collect_gradients_impl!(a::Vector, b::RzGate{<:Variable}) = push!(a, value(b.pa
 
 nparameters(s::AbstractCircuit) = isempty(s) ? 0 : sum([nparameters(gate) for gate in s])
 
-function _collect_gradients_impl!(r::Vector, s::AbstractCircuit)
+function _collect_variables_impl!(r::Vector, s::AbstractCircuit)
 	for gate in s
-	    _collect_gradients_impl!(r, gate)
+	    _collect_variables_impl!(r, gate)
 	end
 end
-
-parameters(s::AbstractCircuit) = collect_variables(s)
 
 function _reset_parameters_impl!(s::AbstractCircuit, coeff::AbstractVector{<:Number}, start_pos::Int=1) 
 	for item in s
