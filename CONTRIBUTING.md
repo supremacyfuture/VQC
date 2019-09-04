@@ -1,20 +1,15 @@
 # Contributing to VQC
 
-We are happy to accept your contributions to make `VQC` better and more awesome! To avoid unnecessary work on either 
-side, please stick to the following process:
+We appreciate and welcome your contributions to make `VQC` more awesome! Please adhere to the following process to maximize productivity:
 
-1. Check if there is already [an issue](https://github.com/supremacyfuture/VQC/issues) for your concern.
-2. If there is not, open a new one to start a discussion. We hate to close finished PRs!
-3. If we decide your concern needs code changes, we would be happy to accept a pull request. Please consider the 
-commit guidelines below.
-
-In case you just want to help out and don't know where to start, 
-[issues with "help wanted" label](https://github.com/supremacyfuture/VQC/labels/help%20wanted) are good for 
-first-time contributors. 
+1. Check through our [Issues](https://github.com/supremacyfuture/VQC/issues) page and see if you can find an old issue similar to yours.
+2. If you can't find any, open a new issue to start a discussion. We review new issues regularly and will take your opinion and suggestion seriously. If we decide your concern needs code changes, we would be happy to accept a pull request with the commit guidelines below.
+3. If you just want to help out and don't know where to start, you are welcome to create 
+[issues with "help wanted" label](https://github.com/supremacyfuture/VQC/labels/help%20wanted). 
 
 ## Git Commit Guidelines
 
 If there is already a ticket, use this number at the start of your commit message. 
 Use meaningful commit messages that described what you did.
 
-**Example:** `GH-42: Added new example: Glover's Algorithm.` 
+**Example:** `issue #42: Added new example: Glover's Algorithm.` 
