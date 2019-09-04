@@ -1,6 +1,8 @@
 export inner_gate, op, key, shift, AdjointGate, TransposeGate, ConjugateGate, gate
-export OneBodyGate, TwoBodyGate, ThreeBodyGate, XGate, YGate, ZGate, HGate, SGate, TGate
-export SqrtXGate, SqrtYGate, CZGate, CNOTGate, SWAPGate, iSWAPGate, CRxGate, CRyGate, CRzGate, TOFFOLIGate
+export OneBodyGate, TwoBodyGate, ThreeBodyGate
+export XGate, YGate, ZGate, HGate, SGate, TGate, SqrtXGate, SqrtYGate
+export RxGate, RyGate, RzGate
+export CZGate, CNOTGate, SWAPGate, iSWAPGate, CRxGate, CRyGate, CRzGate, TOFFOLIGate
 
 abstract type AbstractOneBodyGate <: AbstractGate end
 abstract type AbstractTwoBodyGate <: AbstractGate end

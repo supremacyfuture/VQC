@@ -13,6 +13,7 @@ Base.eltype(x::AbstractCircuit) = Base.eltype(data(x))
 
 # attributes
 Base.isempty(x::AbstractCircuit) = Base.isempty(data(x))
+Base.empty!(x::AbstractCircuit) = empty!(data(x))
 
 add!(x::AbstractCircuit, s) = push!(x, s)
 Base.push!(x::AbstractCircuit, s::AbstractQuantumOperation) = Base.push!(data(x), s)

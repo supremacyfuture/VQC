@@ -1,4 +1,5 @@
-export StateVector, qstate, qrandn, probabilities, distance, expectation, vdot
+export StateVector, qstate, qrandn, distance, expectation, vdot
+export amplitude, amplitudes, probability, probabilities
 
 # struct StateVector{T} <: AbstractArray{T, 1}
 # 	data::Vector{T}
@@ -93,7 +94,21 @@ end
 
 qrandn(n::Int) = qrandn(Complex{Float64}, n)
 
+function amplitude(s::StateVector, i::Vector{Int}) 
+	(length(i)==nqubits(s)) || error("basis mismatch with number of qubits.")
+	for s in i
+	    (s == 0 || s == 1) || error("qubit state must be 0 or 1.")
+	end
+	cudim = dim2cudim_col(Tuple([2 for _ in 1:length(i)]))
+	idx = mind2sind_col(i, cudim)
+	return data(s)[idx+1]
+end
+
+amplitudes(s::StateVector) = data(s)
+
 probabilities(s::StateVector) = (abs.(data(s))).^2
+
+probability(s::StateVector, i::Vector{Int}) = abs(amplitude(s, i))^2
 
 swap!(s::StateVector, i::Int, j::Int) = swap!(data(s), i, j)
 

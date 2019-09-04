@@ -1,3 +1,5 @@
+export X, Y, Z, S, H, sqrtX, sqrtY, T, Rx, Ry, Rz, CONTROL, CZ, CNOT, CX, SWAP, iSWAP
+export CONTROLCONTROL, TOFFOLI, CCX
 
 ZERO = [1., 0.]
 
@@ -20,7 +22,11 @@ const DOWN = [0. 0.; 0. 1.]
 
 const Xh = [1+im 1-im; 1-im 1+im]/2
 
+const sqrtX = Xh
+
 const Yh = [im -im; im im]/sqrt(2*im)
+
+const sqrtY = Yh
 
 const T = [1. 0.; 0. exp(im*pi/4)]
 
@@ -46,7 +52,7 @@ const CX = CNOT
 
 const SWAP = [1. 0. 0. 0.; 0. 0. 1. 0.; 0. 1. 0. 0.; 0. 0. 0. 1.]
 
-const ISWAP = [1. 0. 0. 0.; 0. 0. im 0.; 0. im 0. 0.; 0. 0. 0. 1.]
+const iSWAP = [1. 0. 0. 0.; 0. 0. im 0.; 0. im 0. 0.; 0. 0. 0. 1.]
 
 # three body gates
 function CONTROLCONTROL(u::AbstractMatrix) 

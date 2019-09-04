@@ -16,8 +16,10 @@
 #     return [vdot(z, s * state) for s in circuits], z * circuit
 # end
 
-_get_real(s::AbstractVector{<:Real}) = s
-_get_real(s::AbstractVector{<:Complex}) = [2*real(item) for item in s]
+_get_real(s::Real) = s
+_get_real(s::Complex) = 2 * real(s)
+
+_get_real(s::AbstractVector) = [_get_real(item) for item in s]
 
 @adjoint *(circuit::AbstractCircuit, state::StateVector) = begin
     r = circuit * state
@@ -41,3 +43,13 @@ _get_real(s::AbstractVector{<:Complex}) = [2*real(item) for item in s]
     # end
     return r, z -> (_get_real([vdot(z, s * state) for s in circuits]), z * circuit)
 end 
+
+# @adjoint *(circuit::AbstractCircuit, state::StateVector) = begin
+#     r = circuit * state
+#     circuits = differentiate(circuit)
+#     return r, z -> begin
+#         a = [vdot(z, s * state) for s in circuits]
+#         println(a)
+#         return (_get_real(a), z * circuit)
+#     end 
+# end 
