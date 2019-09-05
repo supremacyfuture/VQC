@@ -1,2 +1,2 @@
 # VQC
-variational quantum circuit simulator in Julia, under GPLv3
+Variational Quantum Circuit simulator in Julia, under GPLv3
