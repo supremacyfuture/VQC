@@ -10,7 +10,7 @@ Variational Quantum Circuit simulator in Julia, under GPLv3
 
 ## Introduction:
   VQC is an open source framework that can simulate variational quantum circuits and used for quantum machine learning tasks.
-  * **Simple but powerful.** VQC suports any single-qubit, two-qubit, three-qubit gate operations, as well as measurements. The same quantum circuit can be used as variational quantum circuits almost for free. 
+  * **Simple but powerful.** VQC supports any single-qubit, two-qubit, three-qubit gate operations, as well as measurements. The same quantum circuit can be used as variational quantum circuits almost for free. 
 
   * **Everything is differentiable.** Not only the quantum circuit, the quantum state itself is also differentiable, almost without any changing of code. In most of the cases, user can write very complex expression built on top of the quantum circuit and the quantum state and the whole expression will be differentiable.
 
