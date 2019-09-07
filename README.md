@@ -60,11 +60,8 @@ julia> results = apply!(circuit, state)
 ```
 ## Contact 
 
-Please email your questions or comments to [supremacyfuture](https://github.com/supremacyfuture/VQC).
+Please email your questions or comments to [supremacyfuture](https://github.com/supremacyfuture/VQC). You are welcome to leave your comment or suggestions as an [issues](https://github.com/supremacyfuture/VQC/issues). For commercial purpose, please email us at support [at] supremacyfuture.com
 
-## Code Style
-
-xxx..
 ## License
 
 VQC is published under [GPLv3](https://github.com/supremacyfuture/VQC/LICENSE)
