@@ -1,0 +1,24 @@
+language: julia
+os:
+  - linux
+  - osx
+julia:
+  - nightly
+  - 1.0.3
+codecov: true
+coveralls: true
+notifications:
+  email: false
+matrix:
+ allow_failures:
+ - julia: nightly
+git:
+  depth: 99999999
+
+script:
+  - julia --project= -e 'using Pkg; Pkg.add("Zygote"); Pkg.develop(PackageSpec(path=pwd()));Pkg.instantiate()'
+  - julia --project=test/ test/runtests.jl deploy
+
+after_success:
+  - julia -e 'using Pkg; Pkg.add("Coverage"); using Coverage; Codecov.submit(process_folder())'
+  - julia -e 'using Pkg; Pkg.add("Coverage"); using Coverage; Coveralls.submit(process_folder())'
