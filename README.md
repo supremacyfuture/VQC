@@ -57,6 +57,18 @@ julia> results = apply!(circuit, state)
 2-element Observables:
  ("Q:Z1", 1)                    
  ("C:Z1->1", 0.4999999999999999)
+
+# In "Q:Z1", Q means quantum observable, Z refer to the basis, 1 is the qubit label
+# Similarly, in "C:Z1->1", C means classical observables, 0.4999.. means the probability
+# Obtain all the measurement outcomes.
+julia> qvalues(results)
+1-element Array{Int64,1}:
+ 1
+
+# Obtain all the measurement probabilities
+julia> cvalues(results)
+1-element Array{Float64,1}:
+ 0.4999999999999999
 ```
 
 ## Tutorials
