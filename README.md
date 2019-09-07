@@ -9,8 +9,8 @@ Variational Quantum Circuit simulator in Julia, under GPLv3
 ---
 
 ## Introduction:
-  VQC is an open source framework that can simulate quantum circuit diagrams.
-  * **XXXX.** ??
+  VQC is an open source framework that can simulate variational quantum circuits and used for quantum machine learning tasks.
+  * **Simple but powerful.** VQC suports any single-qubit, two-qubit, three-qubit gate operations, as well as measurements. 
 
   * **XXXX.** ??
 
