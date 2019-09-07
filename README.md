@@ -46,3 +46,14 @@ julia> x = 1 + 1
 julia> x = "Hello World!"
 "Hello World!"
 ```
+## Contact 
+
+Please email your questions or comments to [supremacyfuture](https://github.com/supremacyfuture/VQC).
+
+## Code Style
+
+xxx......
+## License
+
+xxx....
+
