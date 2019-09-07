@@ -10,13 +10,13 @@ Variational Quantum Circuit simulator in Julia, under GPLv3
 
 ## Introduction:
   VQC is an open source framework that can simulate quantum circuit diagrams............
-  * **XXXXXX.** ?????
+  * **XXXX.** ??
 
-  * **XXXX.** ?????
+  * **XXXX.** ??
 
-  * **XXXXX.** ????
+  * **XXXX.** ??
 
-  * **XXXX.** ?????
+  * **XXXX.** ??
 ## Comparisons between VQC and existing technologies:
 Now at [version 0.1.0](https://baidu.com)!
 
@@ -28,3 +28,21 @@ VQC is a [julia](https://julialang.org/) language package. To install VQC, pleas
 pkg> add ("VQC")
 ```
 ## Example:
+
+```julia
+# Assign the value 10 to the variable x
+julia> x = 10
+10
+
+# Doing math with x's value
+julia> x + 1
+11
+
+# Reassign x's value
+julia> x = 1 + 1
+2
+
+# You can assign values of other types, like strings of text
+julia> x = "Hello World!"
+"Hello World!"
+```
