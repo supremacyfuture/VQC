@@ -67,5 +67,5 @@ Please email your questions or comments to [supremacyfuture](https://github.com/
 xxx..
 ## License
 
-VQC is published under GNUv3 [license](https://github.com/supremacyfuture/VQC/LICENSE)
+VQC is published under [GPLv3](https://github.com/supremacyfuture/VQC/LICENSE)
 
