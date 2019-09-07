@@ -58,6 +58,10 @@ julia> results = apply!(circuit, state)
  ("Q:Z1", 1)                    
  ("C:Z1->1", 0.4999999999999999)
 ```
+
+## Tutorials
+ 1. [Tutorial 1: Basic operations](https://github.com/supremacyfuture/VQC/example/variational_quantum_circuit_simulator.ipynb)
+
 ## Contact 
 
 Please email your questions or comments to [supremacyfuture](https://github.com/supremacyfuture/VQC). You are welcome to leave your comment or suggestions as an [issues](https://github.com/supremacyfuture/VQC/issues). For commercial purpose, please email us at support [at] supremacyfuture.com
