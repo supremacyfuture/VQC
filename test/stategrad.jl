@@ -1,4 +1,3 @@
-push!(LOAD_PATH, "..")
 
 using VQC: qstate, qrandn, simple_gradient, distance, collect_gradients, probabilities
 using VQC: get_coef_sizes_1d, variational_circuit_1d, StateVector

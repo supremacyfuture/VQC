@@ -1,4 +1,3 @@
-push!(LOAD_PATH, "..")
 
 using VQC: nparameters, parameters, set_parameters!, QCircuit, Variable
 using VQC: RxGate, HGate, CNOTGate, add!, parallelize

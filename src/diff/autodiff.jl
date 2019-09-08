@@ -53,3 +53,10 @@ end
 #         return (_get_real(a), z * circuit)
 #     end 
 # end 
+
+@adjoint qstate(mpsstr::Vector{<:Real}) = qstate(mpsstr), z -> begin
+    s = qstate([0 for i in 1:length(mpsstr)])
+    circuit = QCircuit([RyGate(i, Variable(mpsstr[i]*pi/2)) for i in 1:length(mpsstr)])
+    grad = collect_gradients(gradient(m->real(vdot(z, m * s)), circuit))
+    return ([s*pi for s in grad],)
+end
