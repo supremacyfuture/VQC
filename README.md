@@ -1,4 +1,9 @@
-# VQC
+<div align="center"> <img
+src="https://rawgit.com/QuantumBFS/Yao.jl/master/docs/src/assets/logo.svg"
+alt="VQC Logo" width="210"></img>
+<h1>VQC</h1>
+</div>
+
 [![GitHub issues](https://img.shields.io/github/issues/supremacyfuture/VQC)](https://github.com/supremacyfuture/VQC/issues)
 [![Build Status](https://travis-ci.org/supremacyfuture/VQC.svg?branch=master)](https://travis-ci.org/supremacyfuture/VQC)
 [![Coverage Status](https://coveralls.io/repos/github/supremacyfuture/VQC/badge.svg?branch=master)](https://coveralls.io/github/supremacyfuture/VQC?branch=master)
