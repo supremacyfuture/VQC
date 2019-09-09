@@ -25,7 +25,7 @@ Now at [version 0.1.0](https://baidu.com)!
 VQC is a [julia](https://julialang.org/) language package. To install VQC, please [open Julia's interactive session (known as REPL)](https://docs.julialang.org/en/v1/manual/getting-started/) and type
 
 ```julia
-pkg> import Pkg; Pkg.add ("VQC")
+pkg> import Pkg; Pkg.add("VQC")
 ```
 ## Example:
 
