@@ -28,7 +28,7 @@ Now at [version 0.1.0](https://baidu.com)!
 
 ## Installation
 
-VQC is a [julia](https://julialang.org/) language package. To install VQC, please [open Julia's interactive session (known as REPL)](https://docs.julialang.org/en/v1/manual/getting-started/) and type
+VQC is a [Julia](https://julialang.org/) language package. To install VQC, please [open Julia's interactive session (known as REPL)](https://docs.julialang.org/en/v1/manual/getting-started/) and type
 
 ```julia
 pkg> import Pkg; Pkg.add("VQC")
@@ -82,7 +82,7 @@ julia> cvalues(results)
 
 ## Contact 
 
-Please email your questions or comments to [supremacyfuture](https://github.com/supremacyfuture/VQC). You are welcome to leave your comment or suggestions as an [issues](https://github.com/supremacyfuture/VQC/issues). For commercial purpose, please email us at support [at] supremacyfuture.com
+You are welcome to leave your comment or suggestions as an [issues](https://github.com/supremacyfuture/VQC/issues). For commercial purpose, please email us at support [at] supremacyfuture.com
 
 ## License
 
