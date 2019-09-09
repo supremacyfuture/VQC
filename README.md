@@ -9,7 +9,7 @@ alt="VQC Logo" width="210"></img>
 [![Coverage Status](https://coveralls.io/repos/github/supremacyfuture/VQC/badge.svg?branch=master)](https://coveralls.io/github/supremacyfuture/VQC?branch=master)
 [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
 
-Variational Quantum Circuit simulator in Julia, under GPLv3
+Variational Quantum Circuit simulator in Julia, under GPLv3, developed with <3 by [Supremacy Future Technologies](https://supremacyfuture.com).
 
 ---
 
