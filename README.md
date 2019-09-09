@@ -4,10 +4,11 @@ alt="VQC Logo" width="210"></img>
 </div>
 <br>
 
-[![GitHub issues](https://img.shields.io/github/issues/supremacyfuture/VQC)](https://github.com/supremacyfuture/VQC/issues)
-[![Build Status](https://travis-ci.org/supremacyfuture/VQC.svg?branch=master)](https://travis-ci.org/supremacyfuture/VQC)
 [![Coverage Status](https://coveralls.io/repos/github/supremacyfuture/VQC/badge.svg?branch=master)](https://coveralls.io/github/supremacyfuture/VQC?branch=master)
+[![GitHub issues](https://img.shields.io/github/issues/supremacyfuture/VQC)](https://github.com/supremacyfuture/VQC/issues)
+[![License: MIT](https://img.shields.io/badge/License-GPLv3-brightgreen.svg)](https://www.gnu.org/licenses/quick-guide-gplv3.pdf)
 [![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![Build Status](https://travis-ci.org/supremacyfuture/VQC.svg?branch=master)](https://travis-ci.org/supremacyfuture/VQC)
 
 Variational Quantum Circuit simulator in Julia, under GPLv3, developed with <3 by [Supremacy Future Technologies](https://supremacyfuture.com).
 
@@ -87,3 +88,11 @@ Please email your questions or comments to [supremacyfuture](https://github.com/
 
 VQC is published under [GPLv3](https://github.com/supremacyfuture/VQC/LICENSE)
 
+Copyright (C) 2019 [Supremacy Future Technologies](https://supremacyfuture.com)
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program.  If not, see [here](https://www.gnu.org/licenses/gpl-3.0.html).
