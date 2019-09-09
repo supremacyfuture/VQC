@@ -1,7 +1,6 @@
 <div align="center"> <img
 src="https://github.com/supremacyfuture/VQC/blob/master/docs/assets/VQC.svg"
 alt="VQC Logo" width="210"></img>
-<h1>VQC</h1>
 </div>
 
 [![GitHub issues](https://img.shields.io/github/issues/supremacyfuture/VQC)](https://github.com/supremacyfuture/VQC/issues)
