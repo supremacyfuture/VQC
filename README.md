@@ -1,7 +1,8 @@
-<div align="center"> <img
+<div align="left"> <img
 src="https://github.com/supremacyfuture/VQC/blob/master/docs/assets/VQC.svg"
 alt="VQC Logo" width="210"></img>
 </div>
+<br>
 
 [![GitHub issues](https://img.shields.io/github/issues/supremacyfuture/VQC)](https://github.com/supremacyfuture/VQC/issues)
 [![Build Status](https://travis-ci.org/supremacyfuture/VQC.svg?branch=master)](https://travis-ci.org/supremacyfuture/VQC)
