@@ -4,11 +4,11 @@ alt="VQC Logo" width="210"></img>
 </div>
 <br>
 
-[![License: MIT](https://img.shields.io/badge/License-GPLv3-brightgreen.svg)](https://www.gnu.org/licenses/quick-guide-gplv3.pdf)
-[![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![GitHub issues](https://img.shields.io/github/issues/supremacyfuture/VQC)](https://github.com/supremacyfuture/VQC/issues)
-[![Coverage Status](https://coveralls.io/repos/github/supremacyfuture/VQC/badge.svg?branch=master)](https://coveralls.io/github/supremacyfuture/VQC?branch=master)
 [![Build Status](https://travis-ci.org/supremacyfuture/VQC.svg?branch=master)](https://travis-ci.org/supremacyfuture/VQC)
+[![Coverage Status](https://coveralls.io/repos/github/supremacyfuture/VQC/badge.svg?branch=master)](https://coveralls.io/github/supremacyfuture/VQC?branch=master)
+[![GitHub issues](https://img.shields.io/github/issues/supremacyfuture/VQC)](https://github.com/supremacyfuture/VQC/issues)
+[![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg)](CONTRIBUTING.md)
+[![License: MIT](https://img.shields.io/badge/License-GPLv3-brightgreen.svg)](https://www.gnu.org/licenses/quick-guide-gplv3.pdf)
 
 Variational Quantum Circuit simulator in Julia, under GPLv3, developed with <3 by [Supremacy Future Technologies](https://supremacyfuture.com).
 
