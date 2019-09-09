@@ -1,5 +1,5 @@
 <div align="center"> <img
-src="https://rawgit.com/QuantumBFS/Yao.jl/master/docs/src/assets/logo.svg"
+src="https://github.com/supremacyfuture/VQC/blob/master/docs/assets/VQC.svg"
 alt="VQC Logo" width="210"></img>
 <h1>VQC</h1>
 </div>
