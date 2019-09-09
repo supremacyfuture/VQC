@@ -9,51 +9,76 @@ Variational Quantum Circuit simulator in Julia, under GPLv3
 ---
 
 ## Introduction:
-  VQC is an open source framework that can simulate quantum circuit diagrams............
-  * **XXXX.** ??
+  VQC is an open source framework that can simulate variational quantum circuits and used for quantum machine learning tasks.
+  * **Simple but powerful.** VQC supports any single-qubit, two-qubit, three-qubit gate operations, as well as measurements. The same quantum circuit can be used as variational quantum circuits almost for free. 
 
-  * **XXXX.** ??
+  * **Everything is differentiable.** Not only the quantum circuit, the quantum state itself is also differentiable, almost without any changing of code. In most of the cases, user can write a very complex expression built on top of the quantum circuit and the quantum state, and the whole expression will be differentiable.
 
-  * **XXXX.** ??
+  * **Flexiable operations on quantum gates and quantum circuits.** Quantum circuit and quantum gates suport operations such as adjoint, transpose, conjugate, shift to make life easier when building very complex circuits.
 
-  * **XXXX.** ??
+  * **Zygote as backend for auto differentiation.** VQC use Zygote as backend for auto differentiation.
 ## Comparisons between VQC and existing technologies:
 Now at [version 0.1.0](https://baidu.com)!
 
 ## Installation
 
-VQC is a [julia](https://julialang.org/) language package. To install VQC, please [open Julia's interactive session (known as REPL)](https://docs.julialang.org/en/v1/manual/getting-started/) and type `]` in the REPL to use the package mode, then type this command:
+VQC is a [julia](https://julialang.org/) language package. To install VQC, please [open Julia's interactive session (known as REPL)](https://docs.julialang.org/en/v1/manual/getting-started/) and type
 
 ```julia
-pkg> add ("VQC")
+pkg> import Pkg; Pkg.add("VQC")
 ```
 ## Example:
 
 ```julia
-# Assign the value 10 to the variable x
-julia> x = 10
-10
+# Using functions from VQC
+julia> using VQC
 
-# Doing math with x's value
-julia> x + 1
-11
+# Create a two qubit quantum state |00>
+julia> state = qstate([0,0])
+StateVector{Complex{Float64}}(Complex{Float64}[1.0 + 0.0im, 0.0 + 0.0im, 0.0 + 0.0im, 0.0 + 0.0im])
 
-# Reassign x's value
-julia> x = 1 + 1
-2
+# Create and empty quantum circuit
+julia> circuit = QCircuit()
+QCircuit(VQC.AbstractQuantumOperation[])
 
-# You can assign values of other types, like strings of text
-julia> x = "Hello World!"
-"Hello World!"
+# pushing gate operations into the quantum circuit
+julia> push!(circuit, HGate(1))
+1-element Array{VQC.AbstractQuantumOperation,1}:
+ OneBodyGate{Array{Float64,2}}(1, [0.7071067811865475 0.7071067811865475; 0.7071067811865475 -0.7071067811865475])
+
+# pushing measure operation into the quantum circuit
+julia> push!(circuit, QMeasure(1)))
+2-element Array{VQC.AbstractQuantumOperation,1}:
+OneBodyGate{Array{Float64,2}}(1, [0.7071067811865475 0.7071067811865475; 0.7071067811865475 -0.7071067811865475])
+QMeasure(1, true, true, [1.0 0.0; 0.0 1.0]) 
+
+# apply quantum circuit to quantum state
+julia> results = apply!(circuit, state)
+2-element Observables:
+ ("Q:Z1", 1)                    
+ ("C:Z1->1", 0.4999999999999999)
+
+# In "Q:Z1", Q means quantum observable, Z refer to the basis, 1 is the qubit label
+# Similarly, in "C:Z1->1", C means classical observables, 0.4999.. means the probability
+# Obtain all the measurement outcomes.
+julia> qvalues(results)
+1-element Array{Int64,1}:
+ 1
+
+# Obtain all the measurement probabilities
+julia> cvalues(results)
+1-element Array{Float64,1}:
+ 0.4999999999999999
 ```
+
+## Tutorials
+ 1. [Tutorial 1: Basic operations](https://github.com/supremacyfuture/VQC/example/variational_quantum_circuit_simulator.ipynb)
+
 ## Contact 
 
-Please email your questions or comments to [supremacyfuture](https://github.com/supremacyfuture/VQC).
+Please email your questions or comments to [supremacyfuture](https://github.com/supremacyfuture/VQC). You are welcome to leave your comment or suggestions as an [issues](https://github.com/supremacyfuture/VQC/issues). For commercial purpose, please email us at support [at] supremacyfuture.com
 
-## Code Style
-
-xxx......
 ## License
 
-xxx....
+VQC is published under [GPLv3](https://github.com/supremacyfuture/VQC/LICENSE)
 
