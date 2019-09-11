@@ -3,6 +3,9 @@ uuid = "f53c5859-8f70-4782-8aac-8d69ad6f55c5"
 authors = ["supremacyfuture <support@supremacyfuture.com>"]
 version = "0.1.0"
 
+[compat]
+julia = "1"
+
 [deps]
 LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
 Logging = "56ddb016-857b-54e1-b83d-db4d58db5568"
