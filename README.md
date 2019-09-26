@@ -24,7 +24,7 @@ Variational Quantum Circuit simulator in Julia, under GPLv3, developed with <3 b
 
   * **Zygote as backend for auto differentiation.** VQC use Zygote as backend for auto differentiation.
 ## Comparisons between VQC and existing technologies:
-Now at [version 0.1.0](https://baidu.com)!
+Now at [version 0.1.0](https://github.com/supremacyfuture/VQC)!
 
 ## Installation
 
