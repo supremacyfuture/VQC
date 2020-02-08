@@ -78,7 +78,7 @@ julia> cvalues(results)
 ```
 
 ## Tutorials
- 1. [Tutorial 1: Basic operations](https://github.com/supremacyfuture/VQC/example/variational_quantum_circuit_simulator.ipynb)
+ 1. [Tutorial 1: Basic operations](example/variational_quantum_circuit_simulator.ipynb)
 
 ## Contact 
 
