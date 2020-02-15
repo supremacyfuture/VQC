@@ -86,8 +86,6 @@ You are welcome to leave your comment or suggestions as an [issues](https://gith
 
 ## Citing VQC
 
-## Citing IPOD
-
 Please cite the following paper when using VQC: 
 
 ```
