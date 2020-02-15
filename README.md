@@ -84,6 +84,24 @@ julia> cvalues(results)
 
 You are welcome to leave your comment or suggestions as an [issues](https://github.com/supremacyfuture/VQC/issues). For commercial purpose, please email us at support [at] supremacyfuture.com
 
+## Citing VQC
+
+## Citing IPOD
+
+Please cite the following paper when using VQC: 
+
+```
+@misc{liu2019ipod,
+    title={Hybrid Quantum-Classical Convolutional Neural Networks},
+    author={Liu, Junhua and Lim, Kwan Hui and Wood, Kristin L and Huang, Wei and Guo, Chu and Huang, He-Liang},
+    year={2019},
+    eprint={1911.02998},
+    archivePrefix={arXiv},
+    primaryClass={quant-ph}
+}
+```
+
+
 ## License
 
 VQC is published under [GPLv3](https://github.com/supremacyfuture/VQC/LICENSE)
